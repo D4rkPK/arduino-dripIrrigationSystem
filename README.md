@@ -1,2 +1,2 @@
-# sistema-riego-goteo-arduino
-sistema de riego por goteo creado en arduino
+# Sistema-Riego-Goteo-Arduino
+Sistema de riego por goteo creado en arduino
