@@ -71,7 +71,7 @@
 
 1. **ESQUEMA ELECTRICO**
 
-![](Aspose.Words.f385e70e-9b97-400c-af57-c57cd2531767.001.png)
+![](https://github.com/Brandonp22/sistema-riego-goteo-arduino/blob/main/imagenes/Aspose.Words.f385e70e-9b97-400c-af57-c57cd2531767.001.png)
 
 
 
