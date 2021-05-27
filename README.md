@@ -4,7 +4,7 @@
 
 De forma muy general, se puede definir el Riego por Goteo como Riego Localizado. El riego por goteo o riego gota a gota es un método de irrigación que permite una óptima aplicación de agua y abonos en los sistemas agrícolas de las zonas áridas. El agua aplicada se infiltra en el suelo irrigando directamente la zona de influencia radicular a través de un sistema de tuberías y emisores que incrementan la productividad y el rendimiento por unidad de superficie. Esta técnica es la innovación más importante en agricultura desde la invención de los aspersores en los años 1930.
 
-![Por qué elegir el riego por goteo sobre otras técnicas de irrigación? -](Aspose.Words.fb0048e7-002a-46c1-8cbe-51656c76b31f.002.jpeg)
+![Por qué elegir el riego por goteo sobre otras técnicas de irrigación? -](https://github.com/Brandonp22/sistema-riego-goteo-arduino/blob/main/imagenes/Aspose.Words.fb0048e7-002a-46c1-8cbe-51656c76b31f.002.jpeg)
 
 
 
