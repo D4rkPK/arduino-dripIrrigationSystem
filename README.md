@@ -204,12 +204,16 @@ Este método de riego se usa ampliamente en los siguientes cultivos:
 
 **Diagrama de casos de uso del usuario**
 
-![](https://github.com/Brandonp22/sistema-riego-goteo-arduino/blob/main/imagenes/casos%20de%20uso%20usuario.png)
+![](https://github.com/Brandonp22/sistema-riego-goteo-arduino/releases/download/v2.0/casos_de_uso_usuario.png)
 
 **Diagrama de casos de uso de los sensores**
 
-![](https://github.com/Brandonp22/sistema-riego-goteo-arduino/blob/main/imagenes/Diagrama%20de%20flujo.png)
+![](https://github.com/Brandonp22/sistema-riego-goteo-arduino/releases/download/v2.0/Casos_de_uso_sensores.png)
 
 **Diagrama de flujo del sistema de riego por goteo**
 
-![](https://github.com/Brandonp22/sistema-riego-goteo-arduino/blob/main/imagenes/Casos%20de%20uso%20sensores.png)
+![](https://github.com/Brandonp22/sistema-riego-goteo-arduino/releases/download/v2.0/Diagrama_de_flujo.png)
+
+ **Video de prototipo**
+
+<https://drive.google.com/file/d/1l9tVErn09lDyYzyEWCE4eyw0yJ-qHcoe/view?usp=sharing>
