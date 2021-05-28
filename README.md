@@ -204,7 +204,7 @@ Este método de riego se usa ampliamente en los siguientes cultivos:
 
 **Diagrama de casos de uso del usuario**
 
-![](RackMultipart20210528-4-12vjyh0_html_c09817ecfc54d9d5.png)
+![](https://github.com/Brandonp22/sistema-riego-goteo-arduino/blob/main/imagenes/casos%20de%20uso%20usuario.png)
 
 **Diagrama de casos de uso de los sensores**
 
