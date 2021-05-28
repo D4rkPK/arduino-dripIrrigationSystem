@@ -212,4 +212,4 @@ Este método de riego se usa ampliamente en los siguientes cultivos:
 
 **Diagrama de flujo del sistema de riego por goteo**
 
-![](RackMultipart20210528-4-12vjyh0_html_d4666bc2a6e468a6.png)
+![](https://github.com/Brandonp22/sistema-riego-goteo-arduino/blob/main/imagenes/Casos%20de%20uso%20sensores.png)
