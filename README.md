@@ -199,4 +199,17 @@ Este método de riego se usa ampliamente en los siguientes cultivos:
 - Al ser brotes relativamente rápidos requieren abundante agua y sol. Por lo que al regarlas por la noche les ayudará a adquirir los beneficios del agua, y durante el día, todo lo que el sol ofrece.
 - El riego nocturno no llega a interferir con el abono, en el día se puede colocar un poco de abono y la planta lo absorbe, pero si los nutrientes no son precisamente los que tomó la planta, podrías ayudar disolviendo con un poquito de agua del riego nocturno, así pueden cumplir su objetivo sin dañar la planta.
 
+#
+**Diagramas correspondientes al proyecto**
 
+**Diagrama de casos de uso del usuario**
+
+![](RackMultipart20210528-4-12vjyh0_html_c09817ecfc54d9d5.png)
+
+**Diagrama de casos de uso de los sensores**
+
+![](RackMultipart20210528-4-12vjyh0_html_3f88d3caa89f4c4d.png)
+
+**Diagrama de flujo del sistema de riego por goteo**
+
+![](RackMultipart20210528-4-12vjyh0_html_d4666bc2a6e468a6.png)
