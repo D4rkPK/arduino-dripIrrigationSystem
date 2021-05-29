@@ -6,6 +6,20 @@
 
 [Calendario de trabajo del proyecto](https://github.com/Brandonp22/sistema-riego-goteo-arduino/projects/2)
 
+**Releases**
+[Todas las releades](https://github.com/Brandonp22/sistema-riego-goteo-arduino/tags)
+
+V1.0
+[Ir a la release](https://github.com/Brandonp22/sistema-riego-goteo-arduino/releases/tag/v1.0)
+
+V2.0
+[Ir a la release](https://github.com/Brandonp22/sistema-riego-goteo-arduino/releases/tag/v2.0)
+
+V3.0
+[Ir a la release](https://github.com/Brandonp22/sistema-riego-goteo-arduino/releases/tag/v3.0)
+
+
+
 **Sistema de riego por goteo**
 
 De forma muy general, se puede definir el Riego por Goteo como Riego Localizado. El riego por goteo o riego gota a gota es un método de irrigación que permite una óptima aplicación de agua y abonos en los sistemas agrícolas de las zonas áridas. El agua aplicada se infiltra en el suelo irrigando directamente la zona de influencia radicular a través de un sistema de tuberías y emisores que incrementan la productividad y el rendimiento por unidad de superficie. Esta técnica es la innovación más importante en agricultura desde la invención de los aspersores en los años 1930.
