@@ -112,6 +112,10 @@ Este método de riego se usa ampliamente en los siguientes cultivos:
 
 ![](https://github.com/Brandonp22/sistema-riego-goteo-arduino/releases/download/v2.0/Diseno.jpg)
 
+**Especificaciones del sistema**
+
+![](https://github.com/Brandonp22/sistema-riego-goteo-arduino/releases/download/v3.0/Especificacion.jpeg)
+
  **Video de prototipo**
 
 <https://drive.google.com/file/d/1l9tVErn09lDyYzyEWCE4eyw0yJ-qHcoe/view?usp=sharing>
