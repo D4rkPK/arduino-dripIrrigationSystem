@@ -1,6 +1,8 @@
 
 #
-[Propuesta de trabajo](https://github.com/Brandonp22/sistema-riego-goteo-arduino/releases/download/v1.0/Propuesta.pdf)
+[Analisis del proyecto](https://github.com/Brandonp22/sistema-riego-goteo-arduino/blob/main/Analisis.md)
+
+[Propuesta del proyecto](https://github.com/Brandonp22/sistema-riego-goteo-arduino/blob/main/Propuesta.md)
 
 **Sistema de riego por goteo**
 
