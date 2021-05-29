@@ -1,4 +1,5 @@
 /*POSIBLES CASOS
+
 1 Nivel bajo de agua. Muestra temp/hum y humedad del suelo. Da aviso rellenar tanque
 2 Nivel agua OK. Aviso nivel OK
       2.1 Humedad suelo OK. Muestra temp/hum y humedad suelo
@@ -20,12 +21,19 @@ LiquidCrystal_I2C lcd(0x27, 16, 2); //SI no va, se puede poner 0x20 para probar
 #define ldr_pin A2
 
 //////////////////////////Configuro pines y variables
+int ledHumedad = 7;
+int ledLluvia = 6;
+int ledBomba = 5;
+
 int sensor = 2;//Pin 2 para el valor del sensor DHT11
 int temp, humedad;//Configuro las variables de temperatura y humedad del DHT11
 int boton = 3;//Pin 3 para activar manualmente la bomba
-const int nivel = 9; //Pin 9 para medir el nivel de agua
 const int bomba = 13; //Pin 13 para la bomba
 const int humedadsuelo = A0; //A0 para la humedad del suelo
+
+const int bajo =9; // pin 9 nivel agua bajo
+const int alto =8; // pin 8 nivel agua alto
+int rele =10; // rele para activar electrovalvula
 
 int lluvValue =0;
 int lluvia;
@@ -46,8 +54,13 @@ void setup()
   //Configuramos entradas y salidas
   pinMode(humedadsuelo, INPUT);//Configuro humedadsuelo como entrada
   pinMode(bomba, OUTPUT);//Configuro bomba como salida
-  pinMode(nivel, INPUT);//Configuro en nivel de agua como entrada
   pinMode(boton, INPUT);//Configuro en boton como entrada
+  pinMode(bajo, INPUT); //Configuro en nivel de agua bajo como entrada
+  pinMode(alto, INPUT); //Configuro en nivel de agua alto como entrada
+  pinMode(rele, OUTPUT); //Configuro en rele como salida  
+  pinMode( ledHumedad, OUTPUT) ;
+  pinMode( ledLluvia, OUTPUT) ;
+  pinMode( ledBomba, OUTPUT) ;
 
   //Para la pantalla LCD
   lcd.init(); //Inicializamos el LCD
@@ -59,8 +72,9 @@ void setup()
 void loop()
 {
   int SensorValue = analogRead(humedadsuelo);//Leo el valor de la humedad y lo meto en SensorValue
-  int SensorNivel = digitalRead(nivel); //Leo lo que marca el nivel de agua
   int botonest = digitalRead(boton);//Leo lo que marca el boton
+  int estadobajo = digitalRead(bajo); //leo nivel agua bajo
+  int estadoalto= digitalRead(alto); //leo nivel agua alto
   
   int humedadsuelo = map(SensorValue, 1023, 0, 0, 100);
   
@@ -86,56 +100,34 @@ void loop()
   lcd.backlight(); //Activamos la luz de fondo
   lcd.clear();//blanqueamos la pantalla
   lcd.setCursor(0, 0); //Posicion: columna cero fila cero
-  lcd.print("DHT:");
-  lcd.print(temp);
-  lcd.print("C/");
   lcd.print("Luz:");
   lcd.print(ldr_value);
   lcd.print("%");
-  lcd.print(humedad);
-  lcd.print("%");
   lcd.setCursor(0, 1); //Posicion: columna cero fila uno
-  lcd.print("HS:");
+  lcd.print("Humedad Suelo:");
   lcd.print(humedadsuelo);
   lcd.print("%");
   
-    //esto si quiero que la pantalla vaya de izquierda a derecha.
-  /*  for(int c=0;c<12;c++){ //hace una secuencia hacia la izquierda y luego hacia la derecha, por 12 pasos
-    lcd.scrollDisplayLeft();
-    delay(600);   }
-    for(int c=0; c<12;c++){
-    lcd.scrollDisplayRight();
-    delay(600);   }
-    lcd.clear();//blanqueamos la pantalla*/
 
 
 
   ///*********** CONDICIONES DE RIEGO ***********
 
-  if (SensorNivel == 0 && botonest == 1)
-  { Serial.println("Nivel bajo de Agua. Rellenar el tanque");
-
-    lcd.setCursor(0, 0); //Posicion: columna cero fila cero
-    lcd.print("Nivel bajo agua");
-    lcd.setCursor(0, 1); //Posicion: columna cero fila cero
-    lcd.print("Rellenar tanque");
-    delay (2000);
+  if(estadobajo==0 && estadoalto==1){
     lcd.clear();//blanqueamos la pantalla
     lcd.setCursor(0, 0); //Posicion: columna cero fila cero
-    lcd.print("DHT:");
-    lcd.print(temp);
-    lcd.print("C/");
-    lcd.print(humedad);
-    lcd.print("%");
-    lcd.setCursor(0, 1); //Posicion: columna cero fila uno
-    lcd.print("HS:");
-    lcd.print(humedadsuelo);
-    lcd.print("%");
-    delay (1000);
-
+    lcd.print("Llenando tanque");
+    lcd.setCursor(0, 1); //Posicion: columna cero fila cero
+    lcd.print("Por favor espere");
+    while(estadobajo !=1 && estadoalto !=0){
+      digitalWrite(rele, LOW);
+      estadobajo = digitalRead(bajo);
+      estadoalto= digitalRead(alto);
+    }
+    digitalWrite(rele, HIGH);
   }
 
-  if (SensorNivel == 0 && botonest == 0)
+  if (estadobajo == 0 && botonest == 0)
   { Serial.println("Imposible regar, nivel bajo de agua. Debe rellenar el tanque");
     lcd.clear();//blanqueamos la pantalla
     lcd.setCursor(0, 0); //Posicion: columna cero fila cero
@@ -144,13 +136,14 @@ void loop()
     lcd.print("Nivel bajo");
   }
 
-
-  if (SensorNivel == 1)
+  if (estadobajo == 1)
   {
     Serial.println("Nivel de agua correcto, se puede regar");
 
-    if (SensorValue >= 700 && ldr_value < 30 && temp < 30 && lluvValue < 15) // el valor que considero seco y hay que regar es de 700
+    if (SensorValue >= 500 && ldr_value < 30 && temp < 30 && lluvValue < 15) // el valor que considero seco y hay que regar es de 700
     {
+      digitalWrite(rele, HIGH);
+      digitalWrite(ledHumedad, LOW) ; 
       // Si la tierra está seca, comenzara a regar
       // Riega durante 2 segundoS y espera a comprobar la humedad otro segundo
       Serial.println("La tierra está seca, comienza el riego automático");
@@ -158,13 +151,15 @@ void loop()
       lcd.setCursor(0, 0); //Posicion: columna cero fila cero
       lcd.print("Riego automatico");
       lcd.setCursor(0, 1); //Posicion: columna cero fila uno
-      lcd.print("HS:");
+      lcd.print("Hum Suelo:");
       lcd.print(humedadsuelo);
       lcd.print("%");
       digitalWrite(bomba, HIGH);
-      delay(10000);
+      digitalWrite(ledBomba, HIGH);
+      delay(4000);
       digitalWrite(bomba, LOW);
-      delay(2000);
+      digitalWrite(ledBomba, LOW);
+      delay(1000);
 
       if (botonest == 0)
       { Serial.println("No se puede activar riego manual. Riego automático activo");
@@ -176,23 +171,37 @@ void loop()
         delay(1000);
 
       }
-    }
+      } else if(lluvValue > 15){
+        digitalWrite(ledLluvia, HIGH);
+        lcd.clear();//blanqueamos la pantalla
+        lcd.setCursor(0, 0); //Posicion: columna cero fila cero
+        lcd.print("Sistema Apagado");
+        lcd.setCursor(0, 1); //Posicion: columna cero fila cero
+        lcd.print("Lloviendo...");
+        }else{
+          digitalWrite(ledLluvia, LOW);
+          Serial.println("NO Detectada lluvia");  
+        }
 
-    if (SensorValue < 700) //No es necesario el riego automático, pero se puede regar de forma manual
+    if (SensorValue < 500) //No es necesario el riego automático, pero se puede regar de forma manual
     {
+      digitalWrite(rele, HIGH);
+      digitalWrite(ledHumedad, HIGH);
       if (botonest == 0) {
         Serial.println("Regando de forma manual");
         lcd.clear();//blanqueamos la pantalla
         lcd.setCursor(0, 0); //Posicion: columna cero fila cero
         lcd.print("Riego manual");
         lcd.setCursor(0, 1); //Posicion: columna cero fila uno
-        lcd.print("HS:");
+        lcd.print("Hum Suelo:");
         lcd.print(humedadsuelo);
         lcd.print("%");
         digitalWrite(bomba, HIGH);
+        digitalWrite(ledBomba, HIGH);
       }
       if (botonest == 1) {
         digitalWrite(bomba, LOW);
+        digitalWrite(ledBomba, LOW);
       }
     }
   }
