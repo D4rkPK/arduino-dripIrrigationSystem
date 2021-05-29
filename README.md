@@ -1,5 +1,7 @@
 
-**1.**** Metodología seleccionada**
+**Análisis incremental**
+
+**1.** **Metodología seleccionada**
 
 Para cumplir con los requerimientos del proyecto, se seleccionará el modelo incremental.
 
@@ -33,7 +35,7 @@ Se hace esta adaptación ya que los procesos que se llevarán a cabo en la prime
 
 - **Tercera fase incremental: Fase desarrollo 2 y entrega final (Duración 1 semana)**
 
-**2.**** Análisis, desarrollo y planeación del proyecto**
+**2.** **Análisis, desarrollo y planeación del proyecto**
 
 **Primera fase incremental: Fase previa (8 de mayo – 15 de mayo)**
 
