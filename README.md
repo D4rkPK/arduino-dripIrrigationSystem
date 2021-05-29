@@ -1,8 +1,5 @@
 
 #
-
-[Plan de trabajo](link)
-
 **1.**** Metodología seleccionada**
 
 Para cumplir con los requerimientos del proyecto, se seleccionará el modelo incremental.
@@ -174,6 +171,10 @@ En este caso se llevan a cabo las dos etapas al mismo tiempo ya que para agiliza
 - Entrega de manual de usuario, para poder mantener el funcionamiento correcto del sistema.
 
 #
+
+
+[Propuesta de trabajo](https://github.com/Brandonp22/sistema-riego-goteo-arduino/releases/download/v1.0/Propuesta.pdf)
+
 **Sistema de riego por goteo**
 
 De forma muy general, se puede definir el Riego por Goteo como Riego Localizado. El riego por goteo o riego gota a gota es un método de irrigación que permite una óptima aplicación de agua y abonos en los sistemas agrícolas de las zonas áridas. El agua aplicada se infiltra en el suelo irrigando directamente la zona de influencia radicular a través de un sistema de tuberías y emisores que incrementan la productividad y el rendimiento por unidad de superficie. Esta técnica es la innovación más importante en agricultura desde la invención de los aspersores en los años 1930.
