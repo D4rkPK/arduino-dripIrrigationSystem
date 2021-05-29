@@ -4,7 +4,7 @@
 
 [Propuesta del proyecto](https://github.com/Brandonp22/sistema-riego-goteo-arduino/blob/main/Propuesta.md)
 
-[Calendario de trabajo del proyecto](https://github.com/Brandonp22/sistema-riego-goteo-arduino/blob/main/Propuesta.md)
+[Calendario de trabajo del proyecto](https://github.com/Brandonp22/sistema-riego-goteo-arduino/projects/2)
 
 **Sistema de riego por goteo**
 
