@@ -1,131 +1,179 @@
 
 #
-`	`***Correlativo No. 001 Versión No. 01*** 
 
-**Documento de Especificaciones, Requerimientos y Criterios de** 
+[Plan de trabajo](link)
 
-**Aceptación de Software** 
-**
+**1.**** Metodología seleccionada**
 
+Para cumplir con los requerimientos del proyecto, se seleccionará el modelo incremental.
 
-1. **DATOS GENERALES DEL SOLICITANTE:** 
-**
+**¿En qué consiste el modelo incremental?**
 
+El modelo incremental aplica secuencias lineales de manera escalonada conforme avanza el tiempo en el calendario. Cada secuencia lineal produce &quot;incrementos&quot; del proyecto.
 
-**Lugar y fecha:** 
+Permite entregar al cliente un producto más rápido en comparación del modelo de cascada.
 
-|<p>Ubicación: </p><p>**(Región Geográfica)** </p>|<p>Zacapa, Zacapa. </p><p> </p>|
-| :- | :- |
-|<p>Dirección: (Unidad </p><p>Administrativa) </p>|Universidad Mariano Gálvez |
-|<p>Fecha: </p><p> </p>|09 de mayo de 2021 |
-** 
+Permite construir el proyecto en etapas incrementales en donde cada etapa agrega una funcionalidad.
 
-**Sistema, Aplicación o Programa:**   
+![](RackMultipart20210529-4-1wl462y_html_ae5681816f44fd2b.jpg)
 
-|Nombre:  |Ranchón Cameros|
-| :- | :- |
-|Módulo: |Sistema de riego por goteo|
-|Componente: |Agricultura|
-** 
+**¿Por qué se eligió el método incremental?**
 
-1. **FUNCIONALIDAD GENERAL REQUERIDA (OBJETIVOS Y ALCANCE - concretos, medibles, realizables):** 
-**
+Porque se puede planear en base a la funcionalidad que se quiere entregar primero, y el proyecto cuenta con una estructura en fases bien definidas en la funcionalidad de cada una de ellas, el proyecto puede descomponerse en una serie de incrementos, y cada uno suministra una porción de la funcionalidad respecto de la totalidad de los requisitos del proyecto, tomando en cuenta también el tiempo del que se dispone para la finalización del proyecto
 
+**¿De cuántas fases constará el proyecto?**
 
-|<p>Creación sistema Validaciones con las siguientes características: </p><p>A. **Detectar valores de humedad** </p><p>B. **Detectar nivel de luz solar** </p><p>C. **Detectar el nivel de liquido de la fuente de agua**</p><p>D. **Mostrar valores en una pantalla**</p>|
-| :- |
-** 
+Este está dividido en 3 fases, con duración de una semana cada una, donde la primera de ellas se utilizará para adquirir los elementos necesarios con los cuales se llevará a cabo el proyecto e investigación y retroalimentación acerca de las tecnologías que serán utilizadas.
 
-1. **COMPONENTES DEL PROYECTO**
+Por ello, las fases del modelo incremental para la primera semana del proyecto ( **comunicación, planeación, modelado, construcción, despliegue** ) estarán enfocadas en procesos investigativos y de adquisición de productos necesarios, como de la entrega de la documentación respectiva sobre el inicio del proceso y no del desarrollo del proyecto como tal, ya que este inicia en la segunda fase incremental.
 
+Se hace esta adaptación ya que los procesos que se llevarán a cabo en la primera semana, se pueden acoplar a las fases del modelo incremental sin ningún problema, aunque estos no se refieran al desarrollo de software como tal.
 
-|**Para simulación de terreno**|**Componentes electrónicos** |
-| - | - |
-|<p>- Maceta</p><p>- Tubo para goteo</p><p>- Boquilla de goteo</p><p></p><p></p>|<p>- Arduino Nano</p><p>- Breadboard</p><p>- Sensor de temperatura / humedad DHT11</p><p>- Resistencia LDR</p><p>- Sensor de lluvia</p><p>- Pantalla LCD de 16 pines</p><p>- Sensor de humedad del suelo YL-69</p><p>- Bomba de agua</p><p>- Diodo 1N4007</p><p>- Sensor de nivel de líquido FS-28</p><p>- Transistor PN2222</p><p>- 4 resistencias 220 Ohm</p><p>- resistencia de 10K Ohm</p><p>- Cables</p>|
+**Fases del proyecto**
 
+- **Primera fase incremental: Fase previa (Duración 1 semana)**
 
-1. **DETALLE DE FUNCIONALIDAD**
+- **Segunda fase incremental: Fase desarrollo 1 (Duración 1 semana)**
 
-|**Tipo de Requerimiento**|**Descripción, Justificación o detalles a tomar en cuenta**|
-| :-: | :-: |
-|<p>Funcionalidad 1</p><p></p>|<p>- **Detectar valores de Humedad**</p><p>El sistema llevara un control de humedad tanto por tierra y por aire. Y el riego dependerá si estos valores se encuentran bajos.</p><p></p>|
-|<p>Funcionalidad 2</p><p></p>|<p>- **Detectar luz**</p><p>El sistema funcionará al detectar la luz del sol y este se detendrá al llegar a un cierto nivel de humedad en la tierra.</p><p></p>|
-|<p>Funcionalidad 3</p><p></p>|<p>- **Detectar humedad en el aire**</p><p>En caso de no haber luz solar (un día nublado) y el nivel de humedad en el aire es bajo por las altas temperaturas el sistema empezara a funcionar y se detendrá hasta que la tierra llegue a su nivel de humedad deseado.</p><p></p>|
-|<p>Funcionalidad 4</p><p></p>|<p>- **Control de nivel de agua**</p><p>Se llevará un control de nivel de líquido en la fuente de agua (pozo o cisterna) y el sistema hará una advertencia cuando este nivel sea bajo. </p><p></p>|
-|<p>Funcionalidad 5</p><p></p>|<p>- **Control de datos por pantalla**</p><p>El sistema tendrá una pantalla donde podrá consultar el nivel de humedad de la tierra en porcentaje</p><p>** </p>|
-|<p>Funcionalidad 6</p><p></p>|<p>- **Leds de advertencia** </p><p>- Led para indicar funcionamiento de la bomba.</p><p>- Led para indicar si la humedad del suelo está baja.</p><p>- Led para indicar que la humedad en el aire es alta (lluvia) y por tanto no se regará. </p><p></p>|
+- **Tercera fase incremental: Fase desarrollo 2 y entrega final (Duración 1 semana)**
 
+**2.**** Análisis, desarrollo y planeación del proyecto**
 
+**Primera fase incremental: Fase previa (8 de mayo – 15 de mayo)**
 
+**Comunicación (Duración: 2 días)**
 
+**8 de mayo**
 
+- El grupo de trabajo piensa acerca de la idea de un proyecto que pueda ser funcional y cumpla con los requisitos para ser aceptado.
 
+**Desarrollo de documentación para llevar a cabo el planteamiento**
 
+- El equipo de trabajo lleva a cabo una investigación acerca de los elementos que debe de poseer un sistema de riego por goteo, y elabora un documento explicando las funcionalidades que el mismo pueda poseer.
 
+**10 de mayo**
 
+**Planteamiento del proyecto**
 
+Se lleva a cabo el planteamiento del proyecto para poder llegar a un acuerdo si este será aceptado o no, o cambios que se podrían efectuar en el mismo, con el fin de dar inicio posteriormente a las demás fases del proyecto.
 
+**Planeación (Duración: 2 días)**
 
+**9 de mayo**
 
+- Se lleva a cabo una retroalimentación vía internet acerca de cómo funcionan los componentes necesarios para el proyecto, como es el medidor de humedad de tierra, el medidor de humedad del aire, etc.
 
+**11 de mayo**
 
-1. **ESQUEMA ELECTRICO**
+- Se lleva a cabo una cotización de los elementos necesarios para llevar a cabo el proyecto, y ya que es un proyecto que se ejecutará en un grupo de 3 integrantes, sacar un promedio del aporte económico a realizar de cada uno, por lo que es necesario indagar en diferentes sitios web, para ver cual es el que nos ofrece mejores productos y con un precio que no sea elevado.
 
-![](https://github.com/Brandonp22/sistema-riego-goteo-arduino/releases/download/v1.0/Circuito.electronico.png)
+**Modelado (Duración: 2 días)**
 
+En esta etapa se efectúa el análisis y diseño de lo que se entregará del proyecto en los próximos dos entregables donde se muestran los avances más notables del mismo.
 
+**12 de mayo**
 
+- Llegar a un acuerdo acerca de lo que será entregado en las siguientes dos fases incrementales para poder planear de una mejor manera los procesos en los incrementos siguientes.
 
+**13 de mayo**
 
+- Diseño del diagrama electrónico (circuito) en el software fritzing.0.9.3b.32.pc con todos los componentes del sistema de riego por goteo.
 
+**Construcción (Duración: 1 día)**
 
+**14 de mayo**
 
+- Construcción del documento de plan de trabajo para el proyecto final, consistente en un sistema de riego por goteo, con su respectivo calendario acerca de las fechas correspondientes, y qué procesos se llevarán a cabo en cada día.
 
+- Hacer el pedido a primera hora del día de los componentes del sistema.
 
+**Despliegue (Duración: 1 día)**
 
+**15 de mayo**
 
+- Entregar el plan de trabajo del proyecto, y el diagrama electrónico del sistema de riego por goteo.
 
+**Segunda fase incremental: Fase desarrollo 1 (16 de mayo – 22 de mayo)**
 
+**Comunicación (Duración: 1 día)**
 
-1. **DESCRIPCION DE CASOS**
+**16 de mayo**
 
-El LCD se enciende y apaga con el micro interruptor por señal digital. Además, hay un botón para riego manual. El riego se hace a través una bomba de agua. 
+- Tener una plática entre los integrantes del grupo acerca de cambios que puedan efectuarse en el proyecto, y acerca de los avances que se presentarán en el despliegue de esta fase.
 
-Las condiciones son las siguientes:
+**Planeación (Duración: 1 día)**
 
-1. Nivel bajo de agua. Muestra temp/hum y humedad del suelo. Da aviso rellenar tanque. 
+**17 de mayo**
 
-LCD on/off.  
+- Planear qué se trabajará en las siguientes fases, asignando una tarea a cada integrante del grupo, con el fin de cumplir a cabalidad con lo estipulado para el despliegue de la segunda fase incremental.
 
-1. Activo bomba. Muestra temp/hum y humedad del suelo. Da otro aviso: No se puede regar, rellenar tanque. LCD on/off. 
+**Modelado (Duración: 1 día)**
 
-1. Nivel agua OK. Muestra temp/hum y humedad del suelo. Aviso nivel OK. LCD on/off 
+**18 de mayo**
 
-1. Humedad suelo OK. Muestra temp/hum y humedad del suelo. LCD on/off
+- En esta fase que es de análisis y diseño, se trazarán las metas para la fase de construcción, y también se pulirá lo visto en la etapa de planeación, para dejar el modelo del plan de trabajo y qué es lo que se va a entregar realmente en el despliegue de esta fase.
 
-1. Activo bomba. Comienza el riego.
+- Diseño de diagramas de casos de uso.
 
-1. Humedad suelo NO OK. Muestra temp/hum y humedad del suelo. Comienza riego automático. LCD on/off.
+**Construcción (Duración: 3 días)**
 
-1. Activo bomba. Muestra aviso, no se puede activar riego manual. Riego    automático activo. LCD on/off.
+En esta etapa no se trabajará con metas por cada día, ya que al ser un proyecto que se debe finalizar en un tiempo corto, entonces, se avanzará lo más que se pueda en los días según las metas trazadas en las etapas anteriores, con el fin de que para el 21 de mayo podamos tener las funcionalidades especificadas para este incremento terminadas.
 
+**Días de construcción: 19, 20, 21 de mayo**
 
-1. **REFERENCIAS**
+**IMPORTANTE:** Los días 19 y 20, los tres integrantes del grupo trabajaran en lacodificación y desarrollo del proyecto como tal, pero el día 21 un integrante no trabajará en
 
+la construcción, y se dedicará a empezar con la etapa del despliegue, que tendrá una duración de 2 días.
 
+**Despliegue (Duración: 2 días)**
 
-<https://www.youtube.com/watch?v=Z0SqhaNgpjI>
+**21 de mayo**
 
-<https://www.youtube.com/watch?v=U2mXI67H6-A>
+- Un integrante del grupo se encargará de la documentación respectiva a presentar el día 22 de mayo al ingeniero. En estos documentos deben presentarse los avances que se llevaron a cabo, las referencias y demás archivos de ser necesarios (diagramas, código, imágenes, etc.).
 
-<https://www.youtube.com/watch?v=AzHuAoZFBEA>
+**22 de mayo**
 
-<https://www.youtube.com/watch?v=MdCUvPTvpCo>
+- Realizar la entrega y retroalimentación respectiva del segundo incrementable del proyecto, mostrar una demo de cómo funciona el proyecto hasta el momento del despliegue.
 
-`	`*Documento de Especificaciones, Requerimientos y Criterios de Aceptación de Software -DERCAS- 	Página*  PAGE   \\* MERGEFORMAT *3 de*  NUMPAGES   \\* MERGEFORMAT *4* 
+**Tercera fase incremental: Fase desarrollo 2 y entrega final (23 de mayo – 29 de mayo)**
+
+**Comunicación (Duración: 1 día)**
+
+**23 de mayo**
+
+- Se afinan detalles para la presentación final, se platica acerca de las funcionalidades restantes para completar el sistema de riego en su totalidad.
+
+**Planeación y Modelado (Duración: 2 días)**
+
+En este caso se llevan a cabo las dos etapas al mismo tiempo ya que para agilizar procesos, se puede ir planeando y modelando las metas trazadas y diseño de las mismas, al mismo tiempo, con el fin de tener un plan para la fase de construcción bien elaborado, al finalizar la planeación de uno de los procesos, podemos analizarlo y diseñarlo, para dejar bien trazado el objetivo.
+
+**24 y 25 de mayo**
+
+- Planear el orden de trabajo y diseñar un plan para llevarlo a cabo y poder cumplir con el plazo.
+
+- Diseñar diagramas que expliquen las funcionalidades.
+
+- Planear la construcción y modelado de un manual de usuario con los pasos a seguir para el funcionamiento correcto del sistema de riego.
+
+**Construcción (Duración: 3 días)**
+
+- Se ejecuta lo planeado en las anteriores fases, según el orden estipulado durante las fechas **26, 27 y 28 de mayo**
+
+**IMPORTANTE:** Los días 26 y 27, los tres integrantes del grupo trabajaran en lacodificación y desarrollo del proyecto como tal, pero el día 28 un integrante no trabajará en la construcción, y se dedicará a empezar con la etapa del despliegue, que tendrá una duración de 2 días.
+
+**Despliegue (Duración: 2 días)**
+
+**28 de mayo**
+
+- Un integrante del grupo se encargará de la documentación respectiva a presentar el día 28 de mayo al ingeniero. En estos documentos deben presentarse los avances que se llevaron a cabo, las referencias y demás archivos de ser necesarios (diagramas, código, imágenes, etc.).
+
+**29 de mayo**
+
+- Entrega final al ingeniero Estuardo Villatoro del proyecto sistema de riego por goteo, con la documentación y archivos respectivos.
+
+- Entrega de manual de usuario, para poder mantener el funcionamiento correcto del sistema.
 
 #
-
 **Sistema de riego por goteo**
 
 De forma muy general, se puede definir el Riego por Goteo como Riego Localizado. El riego por goteo o riego gota a gota es un método de irrigación que permite una óptima aplicación de agua y abonos en los sistemas agrícolas de las zonas áridas. El agua aplicada se infiltra en el suelo irrigando directamente la zona de influencia radicular a través de un sistema de tuberías y emisores que incrementan la productividad y el rendimiento por unidad de superficie. Esta técnica es la innovación más importante en agricultura desde la invención de los aspersores en los años 1930.
